@@ -33,3 +33,4 @@ print(age)
 # CODUL TĂU VINE MAI SUS:
 
 # Asta a fost tot pentru această sarcină
+# asd
