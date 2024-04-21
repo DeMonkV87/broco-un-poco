@@ -95,7 +95,7 @@ print(Patrate_perfecte)
 # Folosind un buclă for , printează tabla înmulțirii pentru numărul 7.
 
 # CODUL TĂU VINE MAI JOS:
-tabel = {i : i for i in range(1,10,1)}
+tabel = {i for i in range(1,10,1)}
 i = 1
 while i<= 10:
      print("7 *",i ,"=", i*7)
@@ -105,13 +105,16 @@ while i<= 10:
 # Creează o listă de liste, unde fiecare sub-listă conține perechi (i, j) pentru i și j de la 1 la 5. Printează această listă de perechi.
 
 # CODUL TĂU VINE MAI JOS:
-
+lista_listelor = [[i for i in range(1,6,1)] for j in range(1,6,1)]
+# lista_listelor.append([i for i in range(1,6,1)])
+# lista_listelor.append([j for j in range(1,6,1)])
+print(lista_listelor)
 # CODUL TĂU VINE MAI SUS:
 
 # Parcurge lista de la punctul anterior și printează doar perechile unde i < j .
 
 # CODUL TĂU VINE MAI JOS:
-
+# for i in lista_listelor 
 # CODUL TĂU VINE MAI SUS:
 
 # Folosind un buclă while , caută și printează prima valoare care este mai mare decât 10 dintr-o listă cu numere random creată de tine. Dacă nu există, printează "Nu există valori mai mari decât 10".
