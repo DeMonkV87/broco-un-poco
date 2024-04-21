@@ -114,13 +114,18 @@ print(lista_listelor)
 # Parcurge lista de la punctul anterior și printează doar perechile unde i < j .
 
 # CODUL TĂU VINE MAI JOS:
-# for i in lista_listelor 
+
 # CODUL TĂU VINE MAI SUS:
 
 # Folosind un buclă while , caută și printează prima valoare care este mai mare decât 10 dintr-o listă cu numere random creată de tine. Dacă nu există, printează "Nu există valori mai mari decât 10".
 
 # CODUL TĂU VINE MAI JOS:
-
+random_list = [1, 3, 5, 7, 9, 7, 12, 21]
+while i in random_list:
+     if (i in random_list) < 10:
+          print(i)
+     else:
+          print("Nu există valori mai mari decât 10")
 # CODUL TĂU VINE MAI SUS:
 
 # Folosind loop-uri Creează un pătrat de stele ( * ) folosind bucle încadrate. Dimensiunea pătratului va fi citită de la utilizator.
