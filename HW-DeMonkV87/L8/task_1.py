@@ -114,7 +114,11 @@ for sublist in lista_de_liste:
 # Parcurge lista de la punctul anterior și printează doar perechile unde i < j .
 
 # CODUL TĂU VINE MAI JOS:
-
+for sublist in lista_de_liste:
+    for pair in sublist:
+        i, j = pair
+        if i < j:
+            print(pair)
 # CODUL TĂU VINE MAI SUS:
 
 # Folosind un buclă while , caută și printează prima valoare care este mai mare decât 10 dintr-o listă cu numere random creată de tine. Dacă nu există, printează "Nu există valori mai mari decât 10".
@@ -230,9 +234,11 @@ for i in range(1, 4+1):
 # 243
 
 # CODUL TĂU VINE MAI JOS:
-TreilaPutere  = ()
-for i in range(1, 4+1):
-    for j in range(1):
+# TreilaPutere  = ()
+# for i in range(i,i**2):
+#     for j in range(1,5):
+#         print("3"'\n', end="")
+
 # CODUL TĂU VINE MAI SUS:
 
 # Completați sarcinile de mai sus pentru a exersa lucrul cu buclele în Python.
