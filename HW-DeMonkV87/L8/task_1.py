@@ -105,10 +105,10 @@ while i<= 10:
 # Creează o listă de liste, unde fiecare sub-listă conține perechi (i, j) pentru i și j de la 1 la 5. Printează această listă de perechi.
 
 # CODUL TĂU VINE MAI JOS:
-lista_listelor = [[i for i in range(1,6,1)] for j in range(1,6,1)]
-# lista_listelor.append([i for i in range(1,6,1)])
-# lista_listelor.append([j for j in range(1,6,1)])
-print(lista_listelor)
+lista_de_liste = [[(i, j) for j in range(1, 6)] for i in range(1, 6)]
+
+for sublist in lista_de_liste:
+    print(sublist)
 # CODUL TĂU VINE MAI SUS:
 
 # Parcurge lista de la punctul anterior și printează doar perechile unde i < j .
@@ -121,7 +121,7 @@ print(lista_listelor)
 
 # CODUL TĂU VINE MAI JOS:
 random_list = [1, 3, 5, 7, 9, 7, 12, 21]
-while i in random_list:
+while i in enumerate(random_list):
      if (i in random_list) < 10:
           print(i)
      else:
@@ -137,9 +137,11 @@ while i in random_list:
 # *****
 
 # CODUL TĂU VINE MAI JOS:
-# lista = list(range(5))
-# for i in lista:
-#      print(lista)
+patrat = ()
+for i in range(1, 5+1):
+    for j in range(1,5+1):
+        print("*", end="")
+    print()
 # CODUL TĂU VINE MAI SUS:
 
 # Folosind for sau while loops realizați afișările de mai jos
@@ -153,10 +155,11 @@ while i in random_list:
 # 123456
 
 # CODUL TĂU VINE MAI JOS:
-# lista_deltaUP = []
-# for i in range(1,7,1):
-#     lista_deltaUP.append(i)
-#     print(lista_deltaUP)
+lista_deltaUP = []
+for i in range(7):
+    for j in range(1, i+1):
+        print(j, end="")
+    print()
 # CODUL TĂU VINE MAI SUS:
 
 # Afișarea 2:
@@ -168,7 +171,11 @@ while i in random_list:
 # 5
 
 # CODUL TĂU VINE MAI JOS:
-
+lista_deltaDown = []
+for i in range(1,6):
+    for j in range(5, i-1, -1):
+        print(j, end="")
+    print()
 # CODUL TĂU VINE MAI SUS:
 
 # Afișarea 3:
@@ -182,7 +189,13 @@ while i in random_list:
 # g
 
 # CODUL TĂU VINE MAI JOS:
-
+lista_Alfabetica = ()
+for i in range(1,i+1,1):
+    a=97
+    for j in range(7, i-1, -1):
+        print("%c" %(a), end="")
+        a += 1
+    print() # mai trebuie ceva ca sa scoata fiecare litera cu index 1 din printare
 # CODUL TĂU VINE MAI SUS:
 
 # Afișarea 4:
@@ -197,7 +210,11 @@ while i in random_list:
 # -+-+-+-+-+-+-+-+
 
 # CODUL TĂU VINE MAI JOS:
-
+PlusMinus  = ()
+for i in range(1, 4+1):
+    for j in range(1):
+        print("+-+-+-+-+-+-+-+-" '\n' "-+-+-+-+-+-+-+-+", end="")
+    print()
 # CODUL TĂU VINE MAI SUS:
 
 # Afișarea 5:
@@ -213,7 +230,9 @@ while i in random_list:
 # 243
 
 # CODUL TĂU VINE MAI JOS:
-
+TreilaPutere  = ()
+for i in range(1, 4+1):
+    for j in range(1):
 # CODUL TĂU VINE MAI SUS:
 
 # Completați sarcinile de mai sus pentru a exersa lucrul cu buclele în Python.
