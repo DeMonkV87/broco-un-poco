@@ -135,8 +135,6 @@ Exemplu: Pentru numărul 4 rezultatul va fi `True`, iar pentru numărul 5 rezult
 # CODUL TĂU VINE MAI JOS:
 def task_9(n):
     return n%2 ==0
-n=3
-print(task_9(n))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -150,8 +148,8 @@ Exemplu: Pentru numele "Ana", vârsta 32 și orașul "București" rezultatul va 
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_10():
-    pass
+def task_10(nume,varsta,oras=None):
+    return f"Nume: {nume}, Varsta: {varsta}, Oras: {oras}"
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -164,8 +162,8 @@ Exemplu: Pentru lista [10, 20, 30, 40, 50] rezultatul va fi 50
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_11():
-    pass
+def task_11(n):
+    return max(list(n))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -178,8 +176,11 @@ Exemplu: Pentru numărul 5 rezultatul va fi 120
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_12():
-    pass
+def task_12(n):
+    if n==0:
+        return 1
+    else: 
+        return n * task_12(n-1)
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -192,8 +193,10 @@ Exemplu: Pentru numerele 3 și 4 rezultatul va fi (7, 12)
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_13():
-    pass
+def task_13(i,j):
+    sum = i + j
+    prod = i * j
+    return(sum, prod)
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -206,8 +209,13 @@ Exemplu: Pentru vârsta 32 rezultatul va fi "adult"
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_14():
-    pass
+def task_14(n):
+    if n<18:
+        return "minor"
+    if n<66:
+        return "adult"
+    else:
+        return "senior"
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -220,8 +228,8 @@ Exemplu: Pentru string-ul "ana" rezultatul va fi `True`, iar pentru string-ul "t
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_15():
-    pass
+def task_15(n):
+    return ("True" if n == (n[::-1]) else "False")
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -234,8 +242,8 @@ Exemplu: Pentru string-ul "test" rezultatul va fi "tset"
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_16():
-    pass
+def task_16(n):
+    return(n[::-1])
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
