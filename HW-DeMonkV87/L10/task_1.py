@@ -133,8 +133,10 @@ Exemplu: Pentru numărul 4 rezultatul va fi `True`, iar pentru numărul 5 rezult
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_9():
-    pass
+def task_9(n):
+    return n%2 ==0
+n=3
+print(task_9(n))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
