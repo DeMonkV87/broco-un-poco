@@ -256,8 +256,8 @@ Exemplu: Pentru string-ul "Hello, World!" rezultatul va fi 2
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_17():
-    pass
+def task_17(n):
+    return(len(n.split()))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
