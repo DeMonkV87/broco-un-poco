@@ -270,8 +270,8 @@ Exemplu: Pentru temperatura 0 rezultatul va fi 32.0
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_18():
-    pass
+def task_18(n):
+    return((n*1.8)+32)
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -284,8 +284,14 @@ Exemplu: Pentru numărul 7 rezultatul va fi `True`, iar pentru numărul 10 rezul
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_19():
-    pass
+def task_19(n):
+    if n<=1:
+        return("False")
+    for i in range(2, (int(n**0.5)+1)):
+        if n%i == 0:
+            return("False")
+    else:
+        return("True")
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
