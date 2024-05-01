@@ -377,8 +377,15 @@ Exemplu: Pentru numărul 10 rezultatul va fi [1, 2, 5, 10]
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_24():
-    pass
+def task_24(n):
+    lista_divizorilor = []
+    for i in(range(1,n//2+1,1)):
+        if n % i == 0:
+            lista_divizorilor.append(i)
+    lista_divizorilor.append(n)
+    return list(lista_divizorilor)
+n=21
+print(task_24(n))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
