@@ -305,8 +305,19 @@ Exemplu: Pentru numărul 28 rezultatul va fi `True`, iar pentru numărul 10 rezu
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_20():
-    pass
+def task_20(n):
+    lista_divizorilor = []
+    for i in(range(1,n//2+1,1)):
+        if n % i == 0:
+            lista_divizorilor.append(i)
+    lista_divizorilor.append(n)
+    if (sum(lista_divizorilor) - n) == n:
+        return ("True")
+    else:
+        return ("False")
+    
+n=496
+print(task_20(n))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -384,8 +395,6 @@ def task_24(n):
             lista_divizorilor.append(i)
     lista_divizorilor.append(n)
     return list(lista_divizorilor)
-n=21
-print(task_24(n))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
