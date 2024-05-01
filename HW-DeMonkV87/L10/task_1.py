@@ -320,8 +320,13 @@ Exemplu: Pentru numărul 153 rezultatul va fi `True`, iar pentru numărul 10 rez
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_21():
-    pass
+def task_21(n):
+    cifre_din_n = [int(i) for i in str(n)]
+    g = len(cifre_din_n)
+    if sum(j ** g for j in cifre_din_n) == n:
+         return("True")
+    else:
+         return("False")
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
