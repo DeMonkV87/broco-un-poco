@@ -340,8 +340,13 @@ Exemplu: Pentru numărul 18 rezultatul va fi `True`, iar pentru numărul 14 rezu
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_22():
-    pass
+def task_22(n):
+    cifre_din_n = [int(i) for i in str(n)]
+    suma_cifrelor = sum(cifre_din_n)
+    if n % suma_cifrelor == 0:
+         return("True")
+    else:
+         return("False")
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -354,8 +359,12 @@ Exemplu: Pentru numărul 5 rezultatul va fi [0, 1, 1, 2, 3]
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_23():
-    pass
+def task_23(n):
+    Start_Fibonacci = [0, 1]
+    for i in range(1,n):
+        Secv_Fibonacci = Start_Fibonacci[-1] + Start_Fibonacci[-2]
+        Start_Fibonacci.append(Secv_Fibonacci)
+    return Start_Fibonacci[:n]
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
