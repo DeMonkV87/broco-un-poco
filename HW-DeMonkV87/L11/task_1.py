@@ -32,8 +32,9 @@ Exemplu: task_2(1, 2, 'a', 'b') ➞ [1, 2]
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_2():
-    pass
+def task_2(*n):
+    return [i for i in n if isinstance(i,int)]
+print(task_2(1, 2, 'a', 'b','8')) #nu returneaza valorile de genu '8'
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -46,8 +47,12 @@ Exemplu: task_3(1, 4, 5) ➞ 20
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_3():
-    pass
+def task_3(*n):
+    produsul = 1
+    for i in n:
+        produsul *= i
+    return (produsul)
+print(task_3(1, 0, 5))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -60,8 +65,12 @@ Exemplu: task_4(a=1, b=2, c=3) ➞ 'a 1 b 2 c 3'
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_4():
-    pass
+def task_4(**n):
+    rezultat = ""
+    for key, value in n.items():
+        rezultat += f"{key} {value} "
+    return rezultat.strip()
+print(task_4(a=1, b=2, c=3))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -71,9 +80,9 @@ print(session.check_task_4(task_4))
 """
 Task: Creați o funcție cu numele `task_5` care primește un număr variabil de argumente și returnează două liste separate.
 Prima listă conține toate argumentele de tip întreg sortate în ordine crescătoare, iar a doua listă conține denumirea tuturor argumentelor keyword care sunt de tip string sortate în ordine alfabetică.
-Exemplu: task_6(3, 1, 2, a=10, b=20) ➞ [1, 2, 3], []
-Exemplu: task_6(3, 1, 2, a=10, b=20, c='a') ➞ [1, 2, 3], ['c']
-Exemplu: task_6(3, 1, 2, a=10, b=20, c='a', d='b') ➞ [1, 2, 3], ['c', 'd']
+Exemplu: task_5(3, 1, 2, a=10, b=20) ➞ [1, 2, 3], []
+Exemplu: task_5(3, 1, 2, a=10, b=20, c='a') ➞ [1, 2, 3], ['c']
+Exemplu: task_5(3, 1, 2, a=10, b=20, c='a', d='b') ➞ [1, 2, 3], ['c', 'd']
 """
 
 # CODUL TĂU VINE MAI JOS:
@@ -91,8 +100,12 @@ Exemplu: task_6(a=1, b=2, c=3) ➞ {'a': 1, 'b': 2, 'c': 3}
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_6():
-    pass
+def task_6(**n):
+    rezultat = {}
+    for key, value in n.items():
+        rezultat [key] = value
+    return rezultat
+print(task_6(a=1, b=2, c=3))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -106,8 +119,8 @@ Exemplu: task_7(1, 'a', 2, 'b') ➞ {'str': ['a', 'b'], 'int': [1, 2]}
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_7():
-    pass
+def task_7(*n):
+    return [i for i in n if isinstance(i,int)]
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
