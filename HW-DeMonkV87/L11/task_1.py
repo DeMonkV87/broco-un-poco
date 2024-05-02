@@ -201,17 +201,18 @@ Exemplu: task_11(1, 1, 2, 3, 5, 9) ➞ False
 def task_11(*m):
     def SirFibonacci(n):
         Start_Fibonacci = [0, 1]
-        for i in range(1,n):
+        for i in range(2,n,n-1):
             Secv_Fibonacci = Start_Fibonacci[-1] + Start_Fibonacci[-2]
             Start_Fibonacci.append(Secv_Fibonacci)
         return Start_Fibonacci
-    if SirFibonacci == m:
+    fib = SirFibonacci
+    if list(m) == fib:
         return True
     else:
         return False
 
     # return(True if m == SirFibonacci() else False)
-m=(1, 1, 2, 3, 5, 8)
+m=(1, 1, 2, 3, 5,)
 print(task_11(m))
 # CODUL TĂU VINE MAI SUS:
 
