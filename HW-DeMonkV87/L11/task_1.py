@@ -120,7 +120,12 @@ Exemplu: task_7(1, 'a', 2, 'b') ➞ {'str': ['a', 'b'], 'int': [1, 2]}
 
 # CODUL TĂU VINE MAI JOS:
 def task_7(*n):
-    return [i for i in n if isinstance(i,int)]
+    Valori_int = [i for i in n if isinstance(i,int)]
+    Valori_str = [i for i in n if isinstance(i,str)]
+    return {'str':Valori_str, 'int':Valori_int}
+
+print(task_7(1, 'a', 2, 'b'))
+
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -134,8 +139,17 @@ Exemplu: task_8('madam', 'hello', 'level', 'world') ➞ {'palindrom': ['madam', 
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_8():
-    pass
+def task_8(*n):
+    palindrom = []
+    non_palindrom = []
+    for i in n:
+        if i == i[::-1]:
+            palindrom.append(i)
+        else:
+            non_palindrom.append(i)
+    return {'palindrom':palindrom, 'non_palindrom':non_palindrom}
+
+print(task_8('madam', 'hello', 'level', 'world'))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
