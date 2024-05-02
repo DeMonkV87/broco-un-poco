@@ -165,6 +165,10 @@ Exemplu: task_9(1, 2, 3, 4, 5, number=2) ➞ [2, 4]
 # CODUL TĂU VINE MAI JOS:
 def task_9():
     pass
+#     m=n[-1]
+#     return m
+# n= (1, 2, 3, 4, 5, number=2)
+# print(task_9(n))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -194,8 +198,21 @@ Exemplu: task_11(1, 1, 2, 3, 5, 9) ➞ False
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_11():
-    pass
+def task_11(*m):
+    def SirFibonacci(n):
+        Start_Fibonacci = [0, 1]
+        for i in range(1,n):
+            Secv_Fibonacci = Start_Fibonacci[-1] + Start_Fibonacci[-2]
+            Start_Fibonacci.append(Secv_Fibonacci)
+        return Start_Fibonacci
+    if SirFibonacci == m:
+        return True
+    else:
+        return False
+
+    # return(True if m == SirFibonacci() else False)
+m=(1, 1, 2, 3, 5, 8)
+print(task_11(m))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
