@@ -198,22 +198,21 @@ Exemplu: task_11(1, 1, 2, 3, 5, 9) ➞ False
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_11(*m):
-    def SirFibonacci(n):
-        Start_Fibonacci = [0, 1]
-        for i in range(2,n,n-1):
-            Secv_Fibonacci = Start_Fibonacci[-1] + Start_Fibonacci[-2]
-            Start_Fibonacci.append(Secv_Fibonacci)
-        return Start_Fibonacci
-    fib = SirFibonacci
-    if list(m) == fib:
+def task_11(*n):
+    fibonacci = [0, 1]
+    for i in range(2, len(n)):
+        Sir_fibonacci = fibonacci[-1] + fibonacci[-2]
+        fibonacci.append(Sir_fibonacci)
+    a= set(fibonacci)
+    b= set(n)
+    if a == b:
         return True
     else:
         return False
 
     # return(True if m == SirFibonacci() else False)
-m=(1, 1, 2, 3, 5,)
-print(task_11(m))
+n=(0, 1, 1, 2, 3, 5,)
+print(task_11(n))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -294,8 +293,17 @@ Exemplu: task_16(2, 3, 4, 5, operation='div') ➞ 0.008333333333333333
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_16():
-    pass
+def task_16(n):
+    def add(n):
+        add = 0
+    for i in n:
+        add += i
+        return add
+    def sub(n):
+        sub=n[1]- n in range(2,n[-1])
+        sub -= i
+        return sub
+    return add(n),sub(n)
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
