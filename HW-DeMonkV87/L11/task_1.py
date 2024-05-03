@@ -294,16 +294,29 @@ Exemplu: task_16(2, 3, 4, 5, operation='div') ➞ 0.008333333333333333
 
 # CODUL TĂU VINE MAI JOS:
 def task_16(n):
-    def add(n):
-        add = 0
-    for i in n:
-        add += i
-        return add
+    def suma(n):
+        suma = 0
+        for i in n:
+            suma += i
+        return suma
     def sub(n):
-        sub=n[1]- n in range(2,n[-1])
-        sub -= i
+        sub=n[0] 
+        for i in range(1,len(n)):
+            sub -= n[i]
         return sub
-    return add(n),sub(n)
+    def mul(n):
+        mul=(1)
+        for i in range(0,len(n)):
+            mul *= n[i]
+        return mul
+    def div(n):
+        div=(1)
+        for i in range(0,len(n)):
+            div /= n[i]
+        return div
+    return suma(n), sub(n), mul(n), div(n)
+n = (2, 3, 4, 5,)
+print (task_16(n))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
