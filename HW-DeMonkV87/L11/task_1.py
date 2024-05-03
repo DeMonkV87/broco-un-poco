@@ -293,30 +293,47 @@ Exemplu: task_16(2, 3, 4, 5, operation='div') ➞ 0.008333333333333333
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_16(n):
-    def suma(n):
-        suma = 0
-        for i in n:
-            suma += i
-        return suma
-    def sub(n):
-        sub=n[0] 
-        for i in range(1,len(n)):
-            sub -= n[i]
-        return sub
-    def mul(n):
-        mul=(1)
-        for i in range(0,len(n)):
-            mul *= n[i]
-        return mul
-    def div(n):
-        div=(1)
-        for i in range(0,len(n)):
-            div /= n[i]
-        return div
-    return suma(n), sub(n), mul(n), div(n)
-n = (2, 3, 4, 5,)
-print (task_16(n))
+def task_16(*n, operation=None):
+    if operation == 'add':
+        return sum(n)
+    elif operation == 'sub':
+        result = n[0]
+        for num in n[1:]:
+            result -= num
+        return result
+    elif operation == 'mul':
+        result = 1
+        for num in n:
+            result *= num
+        return result
+    elif operation == 'div':
+        result = n[0]
+        for num in n[1:]:
+            result /= num
+        return result
+    else:
+        return "Eroare operatie"
+# CODUL MEU PE CARE L-AM SCRIS INITIAL LUCREAZA DAR NU SE SOCOATE CA CORECT
+# def task_16(*n, operation=None):
+#     if operation == 'add':
+#         return sum(n)
+#     elif operation == 'sub':
+#         sub=n[0] 
+#         for i in range(1,len(n)):
+#             sub -= n[i]
+#         return sub
+#     elif operation == 'mul':
+#         mul=(1)
+#         for i in range(0,len(n)):
+#             mul *= n[i]
+#         return mul
+#     elif operation == 'div':
+#         div=(1)
+#         for i in range(0,len(n)):
+#             div /= n[i]
+#         return div
+#     else:
+#         return "Operatia este difinita incorect"
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -349,8 +366,16 @@ Exemplu: task_18('hello', 'world') ➞ {'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_18():
-    pass
+def task_18(*n):
+    counter = {}
+    for i in n:
+        for j in i:
+            if j in counter:
+                counter[j]+=1
+            else:
+                counter[j]=1
+    return counter
+print(task_18('hello', 'world'))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -363,8 +388,24 @@ Exemplu: task_19(1, 2, 3, 4, 5, 6, 7, 8, 9) ➞ {2: 1, 3: 1, 5: 1, 7: 1}
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_19():
-    pass
+def numere_prime(n):
+    if n<=1:
+        return False
+    for i in range(2, (int(n**0.5)+1)):
+        if n%i == 0:
+            return False
+    else:
+        return True
+def task_19(*n):
+    lista_numere_prime = {}
+    for i in n:
+        if numere_prime(i):
+            if i in lista_numere_prime:
+                lista_numere_prime[i] += 1
+            else:
+                lista_numere_prime[i] = 1
+    return lista_numere_prime
+print(task_19(0, 2, 3, 4, 5, 6, 7, 8, 9))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -378,8 +419,18 @@ Exemplu: task_20('hello', 'world', 'python') ➞ {5: 2, 6: 1}
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_20():
-    pass
+def task_20(*n):
+    numaratoarea_lit = {}
+    for i in n:
+        j = i.split()
+        for k in j:
+            lungime = len(k)
+            if lungime in numaratoarea_lit:
+                numaratoarea_lit[lungime] += 1
+            else:
+                numaratoarea_lit[lungime] = 1
+    return numaratoarea_lit
+print(task_20('hello', 'world'))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
