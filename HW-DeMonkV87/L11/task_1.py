@@ -163,12 +163,13 @@ Exemplu: task_9(1, 2, 3, 4, 5, number=2) ➞ [2, 4]
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_9():
-    pass
-#     m=n[-1]
-#     return m
-# n= (1, 2, 3, 4, 5, number=2)
-# print(task_9(n))
+def task_9(*n, number = None):
+    lista_multipli = [] 
+    for i in n:
+        if number is not None and i % number == 0:
+            lista_multipli.append(i)
+    return lista_multipli
+print(task_9(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, number=2))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
