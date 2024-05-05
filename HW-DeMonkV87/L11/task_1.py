@@ -204,21 +204,13 @@ Exemplu: task_11(1, 1, 2, 3, 5, 9) ➞ False
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_11(*n):
-    fibonacci = [0, 1]
-    for i in range(2, len(n)):
-        Sir_fibonacci = fibonacci[-1] + fibonacci[-2]
-        fibonacci.append(Sir_fibonacci)
-    a= set(fibonacci)
-    b= set(n)
-    if a == b:
-        return True
-    else:
-        return False
+def task_11(*n): # n trebuie sa se inceapa cu 0 nu cu 1 !!!
+    fibonacci = [0, 1] # aici trebuie sa sie al doilea si al treilea numar din sirul fibonacci - adica [1,1]
+    while len(fibonacci) < len(n):
+         fibonacci.append(fibonacci[-1] + fibonacci[-2])
+    return list(n) == fibonacci[:len(n)]
 
-    # return(True if m == SirFibonacci() else False)
-n=(0, 1, 1, 2, 3, 5,)
-print(task_11(n))
+print(task_11(0, 1, 1, 2, 3, 5, 8)) # se genereaza insa nu se i-a in calcul la %
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
