@@ -183,8 +183,13 @@ Exemplu: task_10(1, 2, 3, 4, 5, number=2) ➞ [2, 4]
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_10():
-    pass
+def task_10(*n, number = None):
+    lista_div = []
+    for i in n:
+        if number is not None and number % i == 0:
+            lista_div.append(i)
+    return lista_div
+print(task_10(1, 2, 3, 4, 5, 6, 7, 8, number=4))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
