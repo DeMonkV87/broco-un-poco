@@ -294,8 +294,18 @@ Exemplu: task_15('home', 'same', 'meme', sub_string = 'me') ➞ {'contains': ['h
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_15():
-    pass
+def task_15(*n, sub_string = 'me'):
+    contains = []
+    not_contains = []
+    for i in n:
+        if sub_string == "me":
+            if sub_string in i:
+                contains.append(i)
+            else:
+                not_contains.append(i)
+    dictionar = {'contains': contains,'not_contains': not_contains}
+    return dictionar
+print(task_15('home', 'same', 'meme', sub_string="me"))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
