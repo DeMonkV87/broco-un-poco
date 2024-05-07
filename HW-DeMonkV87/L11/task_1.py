@@ -86,16 +86,17 @@ Exemplu: task_5(3, 1, 2, a=10, b=20, c='a', d='b') ➞ [1, 2, 3], ['c', 'd']
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_5(*n):
-    integer=[]
-    string=[]
-    for i in n:
-        if isinstance(i, int):
-            integer.append(i)
-        elif isinstance(i, str):
-            string.append(i)
+def task_5(*n, **m):
+    integer=sorted(i for i in n if isinstance(i, int))
+    string=sorted(i for i in m.keys() if isinstance(m[i], str))
+    # for i in n:
+    #     if isinstance(i, int):
+    #         integer.append(i)
+    # for k in m.keys():
+    #     if isinstance(k, str):
+    #         string.append(k)
     return integer , string
-print(task_5(3, 1, 2, a=10, b=20))
+print(task_5(3, 1, 2, a=10, b=20, c='a', d='b'))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
