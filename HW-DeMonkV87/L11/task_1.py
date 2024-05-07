@@ -251,8 +251,14 @@ Exemplu: task_13('hello', 'world') ➞ False
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_13():
-    pass
+def task_13(a,*n):
+    cuvint_comparatie = sorted(a)
+    for i in n:
+        litere_comparatie = sorted(i)
+        if litere_comparatie == cuvint_comparatie:
+            return True
+    return False
+print(task_13('listen', 'silent', 'hello', 'world'))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -266,8 +272,14 @@ Exemplu: task_14('home', 'same', 'meme', sub_string="me") ➞ ['home', 'meme', '
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_14():
-    pass
+def task_14(*n, sub_string="me"):
+    raspuns = []
+    if sub_string == "me":
+        for i in n:
+            if sub_string in i:
+                raspuns.append(i)
+    return raspuns
+print(task_14('home', 'same', 'meme', sub_string="me"))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
