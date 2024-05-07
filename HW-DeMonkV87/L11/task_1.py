@@ -225,8 +225,18 @@ Exemplu: task_12(1, 2, 3, 4) ➞ False
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_12():
-    pass
+def task_12(*n):
+    for i in n:
+        if i<=1:
+            return False
+    for num in n:
+        for i in range(2,int(num**0.5)+1):
+            if num%i == 0:
+                return False
+    else:
+        return True
+
+print(task_12(2, 3, 5, 7))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
