@@ -314,7 +314,7 @@ def task_15(*n, sub_string = 'me'):
                 not_contains.append(i)
     dictionar = {'contains': contains,'not_contains': not_contains}
     return dictionar
-print(task_15('home', 'same', 'meme', sub_string="me"))
+print(task_15('home', 'same', 'meme', 'arg', sub_string="me"))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -391,8 +391,25 @@ Exemplu: task_17(2, add=[3, 4, 5], sub=[1, 2]) ➞ 11
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_17():
-    pass
+def task_17(n, **m):
+    rezultat = n
+    for operatie, operator in m.items():
+        if operatie == 'add':
+            rezultat += sum(operator)
+        elif operatie == 'sub':
+            rezultat -= sum(operator)
+        elif operatie == 'mul':
+            rezultat *= 1 if rezultat != 0 else operator[0]
+            for num in operator:
+                rezultat *= num
+        elif operatie == 'div':
+            if 0 in operator:
+                return "la 0 nu se divide!"
+            for num in operator:
+                rezultat /= num
+        else:
+            return "Operatia este difinita incorect"
+    return rezultat # doar cu Chat GPT am trecut de aceast task
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
