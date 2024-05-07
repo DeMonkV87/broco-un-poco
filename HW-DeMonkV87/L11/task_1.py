@@ -86,8 +86,16 @@ Exemplu: task_5(3, 1, 2, a=10, b=20, c='a', d='b') ➞ [1, 2, 3], ['c', 'd']
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_5():
-    pass
+def task_5(*n):
+    integer=[]
+    string=[]
+    for i in n:
+        if isinstance(i, int):
+            integer.append(i)
+        elif isinstance(i, str):
+            string.append(i)
+    return integer , string
+print(task_5(3, 1, 2, a=10, b=20))
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
