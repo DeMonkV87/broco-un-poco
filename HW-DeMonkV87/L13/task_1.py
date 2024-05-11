@@ -94,8 +94,24 @@ Totodată aceasta va avea o metodă numită `upgrade_os` care va primi un parame
 """
 
 # CODUL TĂU VINE MAI JOS:
-class Laptop( ):
-    pass
+class Laptop(Produs):
+    def __init__(self, numele, pretul, anul_producerii, sistem_de_operare, procesor):
+        super().__init__(numele, pretul, anul_producerii)
+        self.sistem_de_operare = sistem_de_operare
+        self.procesor = procesor
+    
+    def upgrade_os(self, new_os):
+        self.sistem_de_operare = new_os
+        
+    def upgrade_processor(self, new_procesor):
+        self.procesor = new_procesor
+
+    def afiseaza_informatii(self):
+        super().afiseaza_informatii()
+        print(f"Sistemul de operare este {self.sistem_de_operare} , Procesorul este {self.procesor}") 
+
+laptop = Laptop ("Lenovo ThinkPad", 33750, 2012, "Win7", "Intel i7 3630QM")
+laptop.afiseaza_informatii()
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -110,8 +126,26 @@ Totodată aceasta va avea o metodă numită `upgrade_autonomy` care va primi un 
 """
 
 # CODUL TĂU VINE MAI JOS:
-class Trotineta( ):
-    pass
+class Trotineta(Produs):
+    def __init__(self, numele, pretul, anul_producerii, viteza_maxima, autonomie_km):
+        super().__init__(numele, pretul, anul_producerii)
+        self.viteza_maxima = viteza_maxima
+        self.autonomie_km = autonomie_km
+    
+    def upgrade_speed(self, new_speed):
+        self.viteza_maxima = new_speed
+
+    def upgrade_autonomy(self, new_autonomy):
+        self.autonomie_km = new_autonomy
+    
+    def afiseaza_informatii(self):
+        super().afiseaza_informatii()
+        print(f"Viteza maxima a trotinetei este {self.viteza_maxima} km/h, Distanta de autonomie constituie circa {self.autonomie_km} km")
+
+trotineta = Trotineta ("Xiaomi 4000 Fast Coffin", 30000, 2024, 99, 100)
+trotineta.afiseaza_informatii()
+trotineta.upgrade_speed(666), trotineta.upgrade_autonomy(101)
+trotineta.afiseaza_informatii()
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
@@ -138,7 +172,9 @@ print(iphone.produs_conectat.numele) # Va returna numele produsului conectat
 """
 
 # CODUL TĂU VINE MAI JOS:
-class AppleProduct( ):
+class AppleProduct(Produs):
+    def __init__(self, numele, pretul, anul_producerii, culoare, produs_conectat):
+        super().__init__(numele, pretul, anul_producerii)
     pass
 # CODUL TĂU VINE MAI SUS:
 
